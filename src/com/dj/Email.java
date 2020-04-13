@@ -29,7 +29,7 @@ public class Email {
         // 获取邮件对象
         Message message = new MimeMessage(session);
         // 设置发件人邮箱地址
-        message.setFrom(new InternetAddress("2332810801@qq.com"));
+        message.setFrom(new InternetAddress("****@qq.com"));
         // 设置收件人邮箱地址
         message.setRecipients(Message.RecipientType.TO,
                 new InternetAddress[] { new InternetAddress(QQmail) });
@@ -41,7 +41,7 @@ public class Email {
         // 得到邮差对象
         Transport transport = session.getTransport();
         // 连接自己的邮箱账户
-        transport.connect("2332810801@qq.com", "kvhnvrmxzvgfecbi");// 密码为QQ邮箱开通的stmp服务后得到的客户端授权码
+        transport.connect("*****@qq.com", "*****授权码");// 密码为QQ邮箱开通的stmp服务后得到的客户端授权码
         // 发送邮件
         int i=0;
         transport.sendMessage(message, message.getAllRecipients());
